@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "b4c52913-013e-407a-bd4b-dbdf8ef4700c",
+		"name": "1DAW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43896303",
+		"_collection_link": "https://mgonpor116-4562501.postman.co/workspace/mgonpor116's-Workspace~37582b30-5fc4-4701-8edf-dca763c08e59/collection/43896303-b4c52913-013e-407a-bd4b-dbdf8ef4700c?action=share&source=collection_link&creator=43896303"
+	},
+	"item": [
+		{
+			"name": "daw-games",
+			"item": [
+				{
+					"name": "Juegos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Ejemplo\",\n  \"genero\": \"Genero de ejemplo\",\n  \"plataforma\": \"Plataforma de ejemplo\",\n  \"precio\": 89.99,\n  \"descargas\": 1000000,\n  \"tipo\": \"BASE\",\n  \"completado\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 11,\n  \"nombre\": \"otro\",\n  \"genero\": \"string\",\n  \"plataforma\": \"string\",\n  \"precio\": 9.99,\n  \"descargas\": 40991,\n  \"fechaLanzamiento\": \"2025-04-11\",\n  \"tipo\": \"DLC\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CambiarCompletado",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/4/completado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"4",
+								"completado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarGenero",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/buscar/genero?genero=accion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"buscar",
+								"genero"
+							],
+							"query": [
+								{
+									"key": "genero",
+									"value": "accion"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarNombre",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/buscar/nombre?nombre=zelda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"buscar",
+								"nombre"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "zelda"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPlataformas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/buscar/plataformas?plataforma=ps4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"buscar",
+								"plataformas"
+							],
+							"query": [
+								{
+									"key": "plataforma",
+									"value": "ps4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Expansiones",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/expansion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"expansion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DLCs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/dlc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"dlc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bases",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/base",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"base"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarRangoPrecios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/rango?min=10&max=25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"rango"
+							],
+							"query": [
+								{
+									"key": "min",
+									"value": "10"
+								},
+								{
+									"key": "max",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarNumDescargas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/daw-games/juegos/descargas/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"daw-games",
+								"juegos",
+								"descargas",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

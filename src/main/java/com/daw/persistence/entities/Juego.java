@@ -6,6 +6,7 @@ import com.daw.persistence.entities.enums.Tipo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,7 +22,7 @@ public class Juego {
 	private long id;
 	private String nombre;
 	private String genero;
-	private String plataforma;
+	private String plataformas;
 	
 	@Column(columnDefinition = "DECIMAL(5,2)")
 	private double precio;
@@ -30,7 +31,7 @@ public class Juego {
 	@Column(name = "fecha_lanzamiento")
 	private LocalDate fechaLanzamiento;
 	
-	@Enumerated
+	@Enumerated(EnumType.STRING)
 	private Tipo tipo;
 	
 	@Column(columnDefinition = "TINYINT")
@@ -61,10 +62,10 @@ public class Juego {
 	}
 
 	public String getPlataforma() {
-		return plataforma;
+		return plataformas;
 	}
 	public void setPlataforma(String plataforma) {
-		this.plataforma = plataforma;
+		this.plataformas = plataforma;
 	}
 
 	public double getPrecio() {
